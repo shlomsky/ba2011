@@ -1,0 +1,117 @@
+@import "screen.scss";
+@import "_base.scss";
+
+#main.cv {
+  margin:0 auto;
+  width:100%;
+  color:#676565;
+  ul {
+    font-size:13px;
+  }
+  #top {
+    @include float-left;
+    width:100%;
+    border-bottom:1px solid #e2e2e2;
+    padding:0 0 13px 0;
+    margin:0 0 30px 0;
+    h1{
+      font-size:18px;
+      width:100%;
+      margin:0 0 10px 0;
+      font-weight:bold;
+    }
+    h2 {
+      @include float-left;
+      font-size:14px;
+    }
+    h3 {
+      font-size:13px;
+      @include float-right;
+      margin:2px 0 0;
+    }
+    a {
+      text-decoration:none;
+    }
+  }
+  #top-skills {
+    @include float-left;
+    margin:0 0 30px 0;
+    width:100%;
+    ul {
+      @include float-left;
+      width:25%;
+      padding:0;
+      &:last-child {
+        padding:0;
+      }
+    }
+    ul:first-child {
+      width:22%;
+      + ul {
+        width:28%;
+      }
+      + ul + ul {
+        width:26%;
+      }
+      + ul + ul + ul {
+        width:24%;
+      }
+    }
+  }
+  #more {
+    @include float-left;
+    width:100%;
+    padding:0 0 13px 0;
+    margin:0 0 35px 0;
+    ul {
+      @include float-left;
+      width:49%;
+      padding:0 15px 0 0;
+      &:last-child {
+        padding:0;
+      }
+      li {
+        margin:6px 0 0 0;
+        list-style-type:none;
+        line-height:19px;
+        span {
+          font-size:10px;
+          padding:0 0 0 2px;
+        }
+      }
+    }
+  }
+  #experience {
+    .startup {
+      @include float-left;
+      width:100%;
+      margin:0 0 40px 0;
+      ul {
+        @include float-left;
+        width:100%;
+        span {
+          font-weight:normal;
+          font-size:13px;
+          &.city {
+            @include float-right;
+            margin:1px 0 0;
+          }
+          &.title {
+            width:100%;
+            @include float-left;
+            margin:10px 0 13px;
+          }
+        }
+        li {
+          line-height:19px;
+          clear:both;
+          margin-top:9px;
+        }
+      }
+    }
+  }
+}
+
+header, footer, menu, #options {
+  display:none !important;
+}
